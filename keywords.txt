@@ -1,0 +1,16 @@
+#######################################################
+############# Keywords for the sio Library ############
+#######################################################
+
+################### Main Classes ######################
+sio	KEYWORD1
+
+
+
+################### Functions #########################
+setSerialMonitor		KEYWORD2
+serialMonitor			KEYWORD2	
+writeToSerial 			KEYWORD2
+readFromSerial 			KEYWORD2
+readFromSerialMonitor 		KEYWORD2
+toggleSerialMonitorStatus	KEYWORD2
