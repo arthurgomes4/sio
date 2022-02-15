@@ -46,21 +46,21 @@ The contents of the **sio** class are detailed and listed further in this sectio
 
 ### Protected Members
 - Variables
-    - **bool serialMonitorStatus = false**: whether to print debugging messages to serial monitor.
-    - **String serialName**: The name of the serial device connected to the ATMEGA.
-    - **Stream *serialStream**: The UART serial bus over which communications which concerned device are taking place.
-    - **Stream *serialMonitorStream = &Serial**: The default debugging serial connection. Usually set to **Serial**(PC with Arduino IDE serial monitor).
+    - `bool serialMonitorStatus = false`: whether to print debugging messages to serial monitor.
+    - `String serialName`: The name of the serial device connected to the ATMEGA.
+    - `Stream *serialStream`: The UART serial bus over which communications which concerned device are taking place.
+    - `Stream *serialMonitorStream = &Serial`: The default debugging serial connection. Usually set to **Serial**(PC with Arduino IDE serial monitor).
 
 ### Public Members
 - Functions
-    - **sio(void)**: empty constructor.
-    - **sio(String Name, Stream *bridge)**: Constructor for initialising name of connection as well as connection bus.
-    - **void setSerialMonitor(Stream *bridge = &Serial, bool Status = true)**: Used to set serial monitor status thorugh given function argument.
-    - **void serialMonitor(String message)**: Prints the passed string argument to the serial monitor.
-    - **void writeToSerial( String message )**: Writes given string to the serial bus of the objects device.
-    - **String readFromSerial( int timeout = -1 )**: Will pause code execution for specified timeout in **milliseconds**. Returns ```'\0'``` if serial Rx buffer is still empty at the end of waiting period.
-    - **String readFromSerialMonitor( int timeout = -1)**: Similar to above function, except reads only from the serial monitors Rx buffer.
-    - **void toggleSerialMonitorStatus( String key )**: reads current contents of serial monitor Rx buffer. If passed string argument matches Rx buffer contents **serialMonitorStatus** is toggled.
+    - `sio(void)`: empty constructor.
+    - `sio(String Name, Stream *bridge)`: Constructor for initialising name of connection as well as connection bus.
+    - `void setSerialMonitor(Stream *bridge = &Serial, bool Status = true)`: Used to set serial monitor status thorugh given function argument.
+    - `void serialMonitor(String message)`: Prints the passed string argument to the serial monitor.
+    - `void writeToSerial( String message )`: Writes given string to the serial bus of the objects device.
+    - `String readFromSerial( int timeout = -1 )`: Will pause code execution for specified timeout in **milliseconds**. Returns ```'\0'``` if serial Rx buffer is still empty at the end of waiting period.
+    - `String readFromSerialMonitor( int timeout = -1)`: Similar to above function, except reads only from the serial monitors Rx buffer.
+    - `void toggleSerialMonitorStatus( String key )`: reads current contents of serial monitor Rx buffer. If passed string argument matches Rx buffer contents `serialMonitorStatus` is toggled.
 
 
 [![Image](https://img.shields.io/badge/developed%20using-VSCode-green.svg)](https://code.visualstudio.com/)
